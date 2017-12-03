@@ -1,15 +1,23 @@
 package com.example.hanbin.networkapplication;
 
 import android.app.Application;
+import android.content.Context;
 
 /**
  * Created by hanbin on 2017/12/3.
  */
 
 public class AppApplication extends Application {
+    private static Context context;
+
+    public static Context getContext() {
+        return context;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
+        context = this;
         //方法一：信任所有证书,不安全有风险
 //        HttpsUtils.SSLParams sslParams1 = HttpsUtils.getSslSocketFactory();
         //方法二：自定义信任规则，校验服务端证书
