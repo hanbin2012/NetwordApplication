@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  * Created by hanbin on 2017/12/3.
- * 请求参数
+ * 请求参数封装
  */
 
 public class RequestParams {

@@ -6,6 +6,7 @@ import android.net.NetworkInfo;
 
 /**
  * Created by hanbin on 2017/12/3.
+ * 工具类
  */
 
 public class Utils {

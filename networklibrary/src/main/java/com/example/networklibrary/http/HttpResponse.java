@@ -1,11 +1,13 @@
 package com.example.networklibrary.http;
+
 /**
  * Created by hanbin on 2017/12/3.
  * 网络请求的回调实体类
  */
 public class HttpResponse {
-    private String url;
-    private String result;
+    private String url;//请求的URL
+    private String result;//请求的数据
+
     public String getResult() {
         return result;
     }

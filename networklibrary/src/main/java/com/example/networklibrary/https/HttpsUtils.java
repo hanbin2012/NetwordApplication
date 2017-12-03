@@ -36,6 +36,10 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
+/**
+ * Created by hanbin on 2017/12/3.
+ * https请求的相关证书
+ */
 public class HttpsUtils {
 
     public static class SSLParams {

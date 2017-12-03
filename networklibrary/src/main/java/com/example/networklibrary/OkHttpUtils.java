@@ -31,13 +31,14 @@ import okhttp3.Response;
  */
 
 public class OkHttpUtils {
+
     public static final String HTTP_REQUEST_METHOD_POST = "POST";
     public static final String HTTP_REQUEST_METHOD_GET = "GET";
     public static final String HTTP_REQUEST_METHOD_PUT = "PUT";
     public static final String HTTP_REQUEST_METHOD_DELETE = "DELETE";
-    private static Handler mainHandler;
+    private static Handler mainHandler;//handler用于回调主线程
     private volatile static OkHttpUtils mInstance;
-    private OkHttpClient mOkHttpClient;
+    private OkHttpClient mOkHttpClient;//OkHttpClient用于发送网络请求
 
     public OkHttpClient getmOkHttpClient() {
         return mOkHttpClient;
@@ -70,6 +71,18 @@ public class OkHttpUtils {
         if (mainHandler == null) {//创建Handler对象
             mainHandler = new Handler(Looper.getMainLooper());
         }
+    }
+
+    /**
+     * get请求方式
+     *
+     * @param context  上下文,一般传递application
+     * @param url      请求的URL地址
+     * @param callback 请求的回调
+     */
+    public static void get(Context context, String url,
+                           HttpResponseCallback callback) {
+        get(context, "", 0, url, null, callback);
     }
 
     /**
