@@ -1,4 +1,4 @@
-package com.example.hanbin.networdapplication;
+package com.example.hanbin.networkapplication;
 
 import org.junit.Test;
 

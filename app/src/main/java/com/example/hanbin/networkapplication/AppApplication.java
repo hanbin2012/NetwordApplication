@@ -1,22 +1,19 @@
-package com.example.hanbin.networdapplication;
+package com.example.hanbin.networkapplication;
 
 import android.app.Application;
-
-import com.example.networklibrary.https.HttpsUtils;
-import com.example.networklibrary.https.SafeTrustManager;
 
 /**
  * Created by hanbin on 2017/12/3.
  */
 
-public class AppAppliaction extends Application {
+public class AppApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
         //方法一：信任所有证书,不安全有风险
-        HttpsUtils.SSLParams sslParams1 = HttpsUtils.getSslSocketFactory();
+//        HttpsUtils.SSLParams sslParams1 = HttpsUtils.getSslSocketFactory();
         //方法二：自定义信任规则，校验服务端证书
-        HttpsUtils.SSLParams sslParams2 = HttpsUtils.getSslSocketFactory(new SafeTrustManager());
+//        HttpsUtils.SSLParams sslParams2 = HttpsUtils.getSslSocketFactory(new SafeTrustManager());
 //        方法三：使用预埋证书，校验服务端证书（自签名证书）
 //        HttpsUtils.SSLParams sslParams3 = HttpsUtils.getSslSocketFactory(getAssets().open("srca.cer"));
         //方法四：使用bks证书和密码管理客户端证书（双向认证），使用预埋证书，校验服务端证书（自签名证书）

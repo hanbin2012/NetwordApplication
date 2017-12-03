@@ -1,4 +1,4 @@
-package com.example.hanbin.networdapplication;
+package com.example.hanbin.networkapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,22 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        OkHttpUtils.post(this, "vi", 12344, "", "", new HttpResponseCallback() {
-//            @Override
-//            public void onRequestSuccess(HttpResponse httpResponse) {
-//
-//            }
-//
-//            @Override
-//            public void onRequestFailed(String string) {
-//
-//            }
-//
-//            @Override
-//            public void networkConnectedStatus(boolean b) {
-//
-//            }
-//        });
         OkHttpUtils.get(this, "", 123434, "http://www.baidu.com", new HttpResponseCallback() {
             @Override
             public void onRequestSuccess(HttpResponse httpResponse) {
